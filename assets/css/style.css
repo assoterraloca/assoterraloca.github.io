@@ -201,7 +201,29 @@
 
 
 #association-photos{
-    transform: rotate(-1deg);
+    transform: rotate(-3deg) scale(1);
+    position: relative;
+    left: -1rem;
+    animation: pulse 10s;
+}
+
+@keyframes pulse {
+    0% {
+        transform: rotate(-3deg) scale(0.95);
+    }
+
+    100% {
+        transform: rotate(-3deg) scale(1);
+    }
+}
+
+#association-photos img{
+    transition: all .5s ease;
+}
+
+#association-photos img:hover{
+    transform: scale(1.005);
+    transition: all .5s ease;
 }
 
 /*** Section Title ***/
