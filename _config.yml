@@ -37,7 +37,7 @@ plugins:
 
 prose:
   rooturl: ''
-  siteurl: 'https://assoterraloca.github.io/'
+  siteurl: 'https://terralocale.github.io/'
   media: 'assets/img/posts'
   metadata:
     _posts:
@@ -45,13 +45,17 @@ prose:
         field:
           label: "Titre de l'article"
           element: "text"
-          placeholder: "Titre descriptif"
-      - name: "date"
+          placeholder: "Titre"
+      - name: "datepost"
         field:
           label: "Date de publication"
           element: "text"
-          placeholder: "YYYY-MM-DD HH:MM:SS"
-          value: CURRENT_DATETIME
+          placeholder: "Jour N° Mois"
+      - name: "lieu"
+        field:
+          label: "Text"
+          element: "text"
+          placeholder: "Entrer le lieu"
       - name: "category"
         field:
           label: "Catégorie"
@@ -64,8 +68,19 @@ prose:
           label: "Résumé Court"
           element: "text"
           placeholder: "Entrer un texte court (1 phrase ou 2)"
+      - name: "description"
+        field:
+          label: "Description complète"
+          element: "textarea"
+          placeholder: "Entrer la descrition complete"
       - name: "layout"
         field:
           element: "hidden"
           value: "post"
+      - name: "date"
+        field:
+          element: "hidden"
+          placeholder: "YYYY-MM-DD"
+          value: CURRENT_DATETIME
       
+
