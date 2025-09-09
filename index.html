@@ -112,6 +112,37 @@ title: Bienvenue sur le site de l'association Terra Locale en Correze 19
 </div>
 <!-- Features End -->
 
+<!-- Features Start -->
+<div class="container-xxl py-5">
+    <div id="rencontres" class="container">
+        <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+            <p class="section-title bg-white text-center text-primary px-3"></p>
+            <h2 class="mb-5">Les prochaines rencontres</h2>
+        </div>
+        <div class="row g-5 posts">
+                {% for post in site.posts %}
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#portfolioModal{{ forloop.index }}" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <p class="article-category">{{ post.category }}</p>
+                        <img src="img/portfolio/{{ post.image }}" class="img-responsive img-centered" alt="image article {{ post.titre }}">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>{{ post.titre }}</h4>
+                        <p class="text-muted">{{ post.lieu }}</p>
+                        <p class="text-muted">{{ post.datepost }}</p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+<!-- Features End -->
+
 
 <!-- Product Start  -->
 <div class="container-xxl py-5">
@@ -179,3 +210,4 @@ title: Bienvenue sur le site de l'association Terra Locale en Correze 19
     {% include contact.html %}
 </div>
 <!-- Form End -->
+
